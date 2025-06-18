@@ -1,4 +1,4 @@
-package main
+package intermediate
 
 import "fmt"
 
@@ -27,8 +27,17 @@ func main() {
 	}
 
 	fmt.Println("Why hello " + user.username + ".")
+
+	John.changeName("Bob")
+
+	fmt.Println("Actually, my name is now " + John.firstName + ".\nOh! I see.")
+
 }
 
 func (p Person) fullName() string {
 	return p.firstName + " " + p.lastName
+}
+
+func (p *Person) changeName(newName string) {
+	p.firstName = newName
 }
