@@ -1,15 +1,15 @@
-package main
+package intermediate
 
-import(
+import (
+	"bufio"
+	_ "crypto/sha512"
 	"fmt"
 	"os"
-	"bufio"
 	"strings"
-	_ "crypto/sha512"
 )
 
 func main() {
-	
+
 	file, err := os.Open("log.txt")
 	if err != nil {
 		fmt.Println("Error opening log:", err)
@@ -29,7 +29,6 @@ func main() {
 			fmt.Println(token)
 		}
 	}
-		
 
 	err = scanner.Err()
 	if err != nil {
