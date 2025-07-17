@@ -1,9 +1,11 @@
-package main
+package advanced 
 
 import (
 	"fmt"
 	"time"
 )
+
+// Accidently moved timer into ticker.go. oops lol
 
 func main() {
 	timer1 := time.NewTimer(2 * time.Second)
